@@ -1,0 +1,114 @@
+1. Instrument Basics
+
+Q: What is an ISIN?
+A: ISIN stands for International Securities Identification Number. It is a 12-character code used globally to uniquely identify financial instruments.
+
+Q: What is a CUSIP?
+A: CUSIP is a 9-character identifier used primarily in the U.S. and Canada to identify securities for clearing and settlement.
+
+Q: What is a SEDOL?
+A: SEDOL is a 7-digit alphanumeric identifier used in the UK for uniquely recognizing securities.
+
+Q: What is a FIGI?
+A: FIGI is the Financial Instrument Global Identifier used across markets to identify securities and derivatives.
+
+Q: Why do instruments need unique identifiers?
+A: Unique identifiers enable efficient trade processing, reconciliation, regulatory reporting, and prevent mismatches during settlement.
+
+2. Reference Data Concepts
+
+Q: What is reference data in investment banking?
+A: Reference data is static or slowly changing information such as instrument attributes, issuer details, and classifications used across trading, risk, and operations systems.
+
+Q: What is instrument mastering?
+A: Instrument mastering is the process of sourcing, validating, enriching, and distributing instrument data across internal systems from various vendors.
+
+Q: What is golden copy in reference data?
+A: A golden copy is the authoritative version of an instrument’s data consolidated from multiple vendors after validation and reconciliation.
+
+Q: What is cross-reference mapping?
+A: This is the mapping of identifiers across vendors and markets (e.g., ISIN ↔ CUSIP ↔ SEDOL ↔ internal IDs).
+
+Q: Why is reference data critical in trade lifecycle?
+A: Incorrect reference data leads to trade breaks, failed settlements, regulatory breaches, and downstream operational risk.
+
+3. Data Vendors & Feeds
+
+Q: What are common reference data vendors?
+A: Bloomberg, Refinitiv, ICE, S&P, SIX Financial, Morningstar, and exchange-provided data.
+
+Q: What is the Bloomberg OpenFIGI API used for?
+A: It allows firms to request instrument identifiers and metadata from Bloomberg’s FIGI system.
+
+Q: What is Reuters RIC?
+A: A RIC (Reuters Instrument Code) is a symbol used to identify financial instruments on Refinitiv platforms.
+
+Q: Why do vendors provide multiple identifiers for the same instrument?
+A: Different vendors maintain separate systems, codes, and metadata structures.
+
+4. Reconciliation Basics
+
+Q: What is reconciliation in investment banking?
+A: It is the process of matching data from different sources (internal vs vendor or system vs system) to identify breaks and inconsistencies.
+
+Q: What is a data break?
+A: A discrepancy between two datasets—for example, different coupon rates or maturity dates for the same instrument.
+
+Q: Why do instrument attributes differ across vendors?
+A: Due to source timing differences, missing updates, data quality issues, or vendor-specific methodologies.
+
+Q: What is tolerance-based matching?
+A: Using configured acceptable thresholds for numeric and date mismatches during reconciliation.
+
+Q: What is attribute-level reconciliation?
+A: Comparing each field of an instrument (coupon, issue date, maturity, currency) between datasets.
+
+5. Corporate Actions & Data Changes
+
+Q: Why do corporate actions cause reference data breaks?
+A: Events such as mergers, splits, or coupon resets change instrument parameters which vendors may publish at different times.
+
+Q: What is an effective date?
+A: The date when a corporate action takes effect and instrument attributes officially change.
+
+Q: What is a redemption?
+A: When a bond issuer repays the principal before or at maturity.
+
+6. Reconciliation Use Cases
+
+Q: What is vendor-to-vendor reconciliation?
+A: Comparing attributes from two vendors (e.g., Bloomberg vs Refinitiv) to detect discrepancies.
+
+Q: What is vendor-to-golden reconciliation?
+A: Ensuring the golden copy matches the latest correct data from upstream vendors.
+
+Q: What is intraday reconciliation?
+A: Multiple reconciliation runs during the day as vendor files arrive at different times.
+
+Q: Why automate reconciliation?
+A: Reduces manual effort, accelerates break resolution, and enhances data freshness.
+
+7. Regulatory Requirements
+
+Q: How does reference data support MiFID II?
+A: Accurate identifiers and classifications are required for transaction reporting and transparency obligations.
+
+Q: What is LEI?
+A: The Legal Entity Identifier is required for identifying counterparties and issuers in regulatory reporting.
+
+Q: Why must banks maintain audit trails?
+A: Regulators require traceability of reference data lineage and change management.
+
+8. Advanced Topics
+
+Q: What is delta processing?
+A: Identifying only the changes between file versions instead of processing full files.
+
+Q: What is enrichment?
+A: Enhancing vendor data with internally computed attributes or external sources.
+
+Q: What is lineage tracking?
+A: Capturing which vendor and which timestamp contributed each field in the golden copy.
+
+Q: Why is AI useful in reconciliation?
+A: AI can detect anomalies, prioritize breaks, and predict probable correct values.

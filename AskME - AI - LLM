@@ -1,13 +1,1 @@
-ai-reference-data-llm/
-│
-├── data/
-│   └── qa_data.txt
-│
-├── notebooks/
-│   └── fine_tuning_llm.ipynb
-│
-├── model/
-│   └── fine_tuned_model/  (generated after training)
-│
-├── README.md
-└── requirements.txt
+
